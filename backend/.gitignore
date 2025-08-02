@@ -1,0 +1,4 @@
+# Ignore files and directories that are not needed in the repository
+
+node_modules/
+blog_project/package-lock.json
