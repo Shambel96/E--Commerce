@@ -7,14 +7,14 @@ const {
   updateProduct,
   deleteProduct,
 } = require("../controllers/productController");
+const { protect, admin } = require("../middleware/authMiddleware");
 
 router.get("/", getProducts);
-router.post("/", addProduct); // In real apps, protect this with admin auth
-router.put("/:id", updateProduct);
+router.post("/", protect, admin, addProduct);
 router
   .route("/:id")
   .get(getProductById)
-  .put(updateProduct)
-  .delete(deleteProduct);
+  .put(protect, admin, updateProduct)
+  .delete(protect, admin, deleteProduct);
 
 module.exports = router;
