@@ -63,12 +63,15 @@ A **backend E-commerce platform** demonstrating **REST API functionality** built
 
 | Method | Endpoint             | Description      |
 | ------ | -------------------- | ---------------- |
-| POST   | `/api/auth/register` | Register user    |
-| POST   | `/api/auth/login`    | Login user       |
+| POST   | `/api/users/register`| Register user    |
+| POST   | `/api/users/login`   | Login user       |
 | GET    | `/api/products`      | Get all products |
-| POST   | `/api/products`      | Add product      |
-| PUT    | `/api/products/:id`  | Update product   |
-| DELETE | `/api/products/:id`  | Delete product   |
+| GET    | `/api/products/:id`  | Get single product|
+| POST   | `/api/products`      | Add product (Admin)|
+| PUT    | `/api/products/:id`  | Update product (Admin)|
+| DELETE | `/api/products/:id`  | Delete product (Admin)|
+| POST   | `/api/orders`        | Place new order (Auth)|
+| GET    | `/api/orders/myorders` | Get user orders (Auth)|
 
 ---
 Contributions are welcome... Send me PR i will review and merge it.
